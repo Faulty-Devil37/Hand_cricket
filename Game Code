@@ -1,0 +1,28 @@
+from random import *
+
+#toss
+user_choice = input("odd or even ? ")
+
+user_toss = int(input("Enter a number for the toss : "))
+if user_toss < 1 or user_toss > 6 :
+    print ("Invalid input , HANG IN THE FAN ")
+else :
+    comp_toss = randint(1,6)
+    print(f"The computer chose {comp_toss}")
+    toss = user_toss + comp_toss
+    print(toss)
+    if toss%2 == 0 :
+        result = "even"
+    else :
+        result = "odd"
+    print (f"its {result}")
+    if user_choice == result :
+        print ('You won the toss')
+        choice = input("batting OR bowling ? ")
+ 
+    else :
+        print ('Computer won the toss')
+        choices = ["batting","bowling"]
+        choice = choice(choices)
+        
+    print (f"You are {choice}")
