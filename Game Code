@@ -26,3 +26,154 @@ else :
         choice = choice(choices)
         
     print (f"You are {choice}")
+
+    #Batting 
+
+    score = 0
+    comp_score = 0
+
+    if choice == "batting" :
+        for i in range(1,7) :
+            if i == 1 :
+                user_no = int(input(f"1st ball! \n which number u choose ? "))
+            elif i == 2 :
+                user_no = int(input(f"2nd ball! \n which number u choose ? "))
+            elif i == 3 :
+                user_no = int(input(f"3rd ball! \n which number u choose ? "))
+            else :
+                user_no = int(input(f"{i}th ball! \n which number u choose ? "))
+            
+            if user_no < 1 or user_no > 6 :
+                print ("Invalid input , HANG IN THE FAN ")
+                break
+
+            else :
+                comp_no = randint(1,6)
+
+                print(f"the computer chose {comp_no}")
+
+                if user_no == comp_no :
+                    print(f"oh fk ! u got out as the comp chose the same no. \n Your score is {score}")
+                    break
+                else:
+                    score += user_no
+                    print(f"Your score is {score}")
+
+    #Comp-Batting   
+
+        print ("    Now you are bowling , computer needs ", score+1 ,"runs to win ")
+        for i in range(1,7) :
+            if i == 1 :
+                user_no = int(input(f"1st ball! \n which number u choose to bowl ? "))
+            elif i == 2 :
+                user_no = int(input(f"2nd ball! \n which number u choose to bowl ? "))
+            elif i == 3 :
+                user_no = int(input(f"3rd ball! \n which number u choose to bowl ? "))
+            else :
+                user_no = int(input(f"{i}th ball! \n which number u choose to bowl ? "))
+            
+            if user_no < 1 or user_no > 6 :
+                print ("Invalid input , HANG IN THE FAN ")
+                break
+
+            else:
+                comp_no = randint(1,6)
+
+                print(f"the computer chose {comp_no}")
+
+                if user_no == comp_no :
+                    print(f"Hurray ! You took the Computer's wicket as the comp chose the same no. \n Computer's score is {comp_score}")
+                    break
+                elif score < comp_score + comp_no :
+                    comp_score += comp_no
+                    print(f"The Computer's score is {comp_score}")
+                    break
+                else:
+                    comp_score += comp_no
+                    print(f"The Computer's score is {comp_score}")
+
+    #Result
+
+        if user_no < 1 or user_no > 6 :
+                pass
+        else:            
+            if comp_score<score :
+                print("    Hurray!You won by ",score-comp_score, "runs")
+            else : 
+                print("    Unfortunately you lost with ",6-i,"balls left")
+    
+    #Bowling
+    
+    else :
+        for i in range(1,7) :
+            if i == 1 :
+                user_no = int(input(f"First ball! \n which number u choose to bowl ? "))
+            elif i == 2 :
+                user_no = int(input(f"2nd ball! \n which number u choose to bowl ? "))
+            elif i == 3 :
+                user_no = int(input(f"3rd ball! \n which number u choose to bowl ? "))
+            else :
+                user_no = int(input(f"{i}th ball! \n which number u choose to bowl ? "))
+            
+            if user_no < 1 or user_no > 6 :
+                print ("Invalid input , HANG IN THE FAN ")
+                break
+
+            else:
+                comp_no = randint(1,6)
+
+                print(f"the computer chose {comp_no}")
+
+                if user_no == comp_no :
+                    print(f"Hurray ! You took the Computer's wicket as the comp chose the same no. \n Computer's score is {comp_score}")
+                    break
+                else:
+                    comp_score += comp_no
+                    print(f"The Computer's score is {comp_score}")
+    
+    #Comp-bowling
+        print(f"    Now you are batting \n You need {comp_score} runs to win")
+        for i in range(1,7) :
+            if i == 1 :
+                user_no = int(input(f"First ball! \n which number u choose ? "))
+            elif i == 2 :
+                user_no = int(input(f"2nd ball! \n which number u choose ? "))
+            elif i == 3 :
+                user_no = int(input(f"3rd ball! \n which number u choose ? "))
+            else :
+                user_no = int(input(f"{i}th ball! \n which number u choose ? "))
+            
+            if user_no < 1 or user_no > 6 :
+                print ("Invalid input , HANG IN THE FAN ")
+                break
+
+            else :
+                comp_no = randint(1,6)
+
+                print(f"the computer chose {comp_no}")
+
+                if user_no == comp_no :
+                    print(f"oh fk ! u got out as the comp chose the same no. \n Your score is {score}")
+                    break
+                elif comp_score < score + user_no :
+                    score += user_no
+                    print(f"Your score is {score}")
+                    break
+                else:
+                    score += user_no
+                    print(f"Your score is {score}")
+
+    #result
+
+        if user_no < 1 or user_no > 6 :
+                pass
+
+        else:
+            if comp_score<score :
+                print("    Hurray ! You won with ", 6-i ,"Balls left")
+            else :
+                print("    Unfortunately you lost by ", comp_score-score ,"runs")
+
+
+
+
