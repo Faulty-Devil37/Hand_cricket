@@ -1,6 +1,42 @@
 from random import *
 
+#rules
+
+print(
+"""
+🎮 CLASSIC HAND CRICKET RULES 🏏
+
+1. Toss Time:
+   - You and the computer each pick a number between 1 and 6.
+   - Sum of both numbers decides the toss:
+       - If the total is EVEN and you chose "even" → you win.
+       - If the total is ODD and you chose "odd" → you win.
+       - Else → computer wins.
+
+2. The Innings:
+   - The batting side picks a number (1 to 6).
+   - The bowling side (computer/you) also picks a number (1 to 6).
+   - If both numbers match → the batsman is OUT!
+   - If not → the batsman scores runs equal to the number they chose.
+
+3. Each side gets up to 6 balls unless they get out early.
+
+4. Second innings:
+   - The other player bats and chases the target.
+   - If they reach or beat the target within 6 balls → they win.
+   - If they get out or fall short → they lose.
+
+5. Invalid Inputs:
+   - Only numbers 1 to 6 are allowed.
+   - Any other input = DISQUALIFIED (aka "HANG IN THE FAN 😤")
+
+Have fun! May your numbers never match 🙏✨
+
+"""
+)
+
 #toss
+
 user_choice = input("odd or even ? ")
 
 user_toss = int(input("Enter a number for the toss : "))
