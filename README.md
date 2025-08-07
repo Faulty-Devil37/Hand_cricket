@@ -1,89 +1,57 @@
-# 🏏 Hand Cricket (Python Edition)
+# 🏏 Hand Cricket Game — Terminal Edition
 
-Welcome to **Hand Cricket** – the digital revival of the legendary school-time game, coded in Python!  
-Right now, this repository contains the **Toss phase**, with more exciting innings to come!
+Ever played hand cricket with your buddies during school breaks?  
+Now relive that chaos and glory in your terminal!
 
----
+## 🎮 Game Overview
 
-## 🎮 What’s in the game so far?
+A Python-based hand cricket simulation between you and the computer.  
+You do the toss, pick your moves, and either clap in victory or cry like Dhoni fans in 2019.
 
-Right now, we’ve coded the **Toss**—because every epic match needs a proper start!
+## 📄 File Info
 
-### ⚙️ Toss Logic:
-- User picks **odd** or **even**
-- Both player and computer choose a number between **1 and 6**
-- Their sum decides the result
-- Whoever wins the toss gets to **choose to bat or bowl first** (or the computer chooses randomly if it wins)
+- **Main Script:** `Game code.py`
+- **Language:** Python 3
+- **Dependencies:** Only the built-in `random` module
 
----
+## 🧠 Game Rules (Classic Style)
 
-## 🧠 How it Works (Code Summary):
+- Pick a number between **1 to 6** each ball.
+- If your number = computer's number → **You're OUT!**
+- Else, your number gets added to the score.
+- 6 balls per innings.
+- Toss decides who bats/bowls first.
+- Highest score after both innings wins.
 
-```python
-from random import *
+## ▶️ How to Run
 
-user_choice = input("odd or even ? ")
-user_toss = int(input("Enter a number for the toss : "))
+Make sure Python is installed. Then:
 
-if user_toss < 1 or user_toss > 6:
-    print("Invalid input , HANG IN THE FAN ")
-else:
-    comp_toss = randint(1, 6)
-    toss = user_toss + comp_toss
-    result = "even" if toss % 2 == 0 else "odd"
+```bash
+python "Game code.py"
+```
 
-    if user_choice == result:
-        print("You won the toss")
-        choice = input("batting OR bowling ? ")
-    else:
-        print("Computer won the toss")
-        choices = ["batting", "bowling"]
-        choice = choice(choices)  # ⚠️ Bug here (see below)
+Follow the prompts and play like a legend.
 
-    print(f"You are {choice}")
-````
----
+## 💡 Features
 
-## 🚧 Future Plans
+* Toss system (Odd/Even with twist of fate)
+* Turn-based gameplay
+* Real-time score tracking
+* Handles invalid inputs like a strict PE teacher
+* Dramatic match results 😤🔥
 
-* 🏏 Full batting and bowling logic
-* 🔢 Scoring system
-* 🧠 AI-like responses for the computer
-* 🎨 Optional GUI (maybe… if we’re feeling spicy 🌶️)
+## 🌱 Future Scope
 
----
+* GUI version using Tkinter
+* Match history or leaderboard
+* Multiplayer via socket or local hotseat
 
-## 📦 How to Run
+## 🤘 Author
 
-1. Make sure you have **Python 3** installed.
-2. Clone the repo:
-
-   ```bash
-   git clone https://github.com/your-username/hand-cricket.git
-   cd hand-cricket
-   ```
-3. Run the script:
-
-   ```bash
-   python hand_cricket.py
-   ```
+Built by **Kingu sama**,
+Just a coding student bringing cricket nostalgia to the screen.
 
 ---
 
-## 🤝 Contributions
-
-Pull requests are welcome! Got a cool idea? Wanna fix a bug? Fork it, code it, and drop a PR.
-
----
-
-## 📜 License
-
-MIT License – do what you want, just don’t blame me if the computer keeps winning the toss.
-
----
-
-## 👑 Author
-
-Made with fingers and fury by **Faulty-Devil37**.
-May the sixes be ever in your favor. 🏏🔥
-
+*“You either win the toss or get tossed.” — Some wise guy*
